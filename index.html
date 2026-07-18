@@ -1,30 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ms">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Program Derma Darah 2026</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header class="hero">
-<h1>🩸 Program Derma Darah</h1>
+<div class="overlay">
+<div class="logos">
+<img src="assets/jata.png" alt="Jata Malaysia">
+<img src="assets/htf.png" alt="Hospital Tuanku Fauziah">
+<img src="assets/ppp.png" alt="Penolong Pegawai Perubatan">
+</div>
+<h1>PROGRAM DERMA DARAH</h1>
 <h2>Sempena Hari Penolong Pegawai Perubatan 2026</h2>
-<p>21 Julai 2026 | 8:30 pagi – 1:00 petang</p>
-<p>Hospital Tuanku Fauziah</p>
+<div class="event-card">
+<p><strong>📅 Tarikh:</strong> 21 Julai 2026</p>
+<p><strong>🕣 Masa:</strong> 8.30 pagi – 1.00 petang</p>
+<p><strong>📍 Lokasi:</strong> Hospital Tuanku Fauziah</p>
+</div>
+<a href="#songs" class="btn">Lihat Lirik Lagu</a>
+</div>
 </header>
-<main>
-<section class="cards">
-<button class="card" onclick="show('negaraku')">🇲🇾 Negaraku</button>
-<button class="card" onclick="show('perlis')">💚 Amin Amin Ya Rabbal Jalil</button>
-<button class="card" onclick="show('ppp')">🩺 Penolong Pegawai Perubatan Berjaya</button>
+
+<section id="songs">
+<h2>Lirik Lagu</h2>
+<div class="song-card" onclick="showSong('negaraku')"><h3>🇲🇾 Negaraku</h3><p>Klik untuk melihat lirik</p></div>
+<div class="song-card" onclick="showSong('perlis')"><h3>💚 Amin Amin Ya Rabbal Jalil</h3><p>Klik untuk melihat lirik</p></div>
+<div class="song-card" onclick="showSong('ppp')"><h3>🩺 Penolong Pegawai Perubatan Berjaya</h3><p>Klik untuk melihat lirik</p></div>
 </section>
+
 <section id="lyrics">
-<h2 id="title">Pilih lagu</h2>
-<pre id="text">Sila pilih lagu di atas.</pre>
+<div id="lyricsContent">
+<h2>Pilih lagu di atas</h2>
+<p>Tekan mana-mana lagu untuk melihat lirik.</p>
+</div>
 </section>
-</main>
-<footer>Setitis darah anda mampu menyelamatkan nyawa.</footer>
+
+<footer>
+<p><strong>Setitis Darah, Sejuta Harapan.</strong></p>
+<p>Penolong Pegawai Perubatan Negeri Perlis</p>
+</footer>
+
 <script src="script.js"></script>
 </body>
 </html>

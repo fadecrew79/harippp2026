@@ -1,8 +1,181 @@
-body{margin:0;font-family:Arial,sans-serif;background:linear-gradient(135deg,#0f8b8d,#ffffff);color:#123}
-.hero{text-align:center;padding:50px 20px;color:#fff;background:#0f8b8d}
-.cards{display:grid;gap:15px;padding:20px;max-width:700px;margin:auto}
-.card{padding:18px;border:none;border-radius:14px;background:#fff;font-size:18px;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.15)}
-.card:hover{transform:translateY(-2px)}
-#lyrics{max-width:700px;margin:20px auto;background:#fff;padding:20px;border-radius:14px;box-shadow:0 4px 12px rgba(0,0,0,.15)}
-pre{white-space:pre-wrap;font-size:18px;line-height:1.7}
-footer{text-align:center;padding:20px}
+/* Sprint 1B - Professional Theme */
+
+:root{
+  --primary:#0F9D9A;
+  --secondary:#0A2A66;
+  --accent:#D62839;
+  --light:#F4F8FA;
+  --glass:rgba(255,255,255,.16);
+  --text:#1F2937;
+  --shadow:0 12px 30px rgba(0,0,0,.18);
+  --radius:22px;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+  font-family:Segoe UI,Arial,sans-serif;
+  color:var(--text);
+  background:#eef4f6;
+  line-height:1.6;
+}
+
+.hero{
+  min-height:100vh;
+  background:
+  linear-gradient(rgba(10,42,102,.60),rgba(15,157,154,.65)),
+  url("assets/DJI_0013-Pano.jpg") center/cover no-repeat;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:40px 20px;
+}
+
+.overlay{
+  width:min(920px,100%);
+  background:var(--glass);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,.25);
+  border-radius:30px;
+  padding:40px;
+  color:#fff;
+  box-shadow:var(--shadow);
+}
+
+.logos{
+ display:flex;
+ justify-content:center;
+ gap:20px;
+ flex-wrap:wrap;
+ margin-bottom:25px;
+}
+
+.logos img{
+ width:90px;
+ height:90px;
+ object-fit:contain;
+ background:rgba(255,255,255,.15);
+ border-radius:50%;
+ padding:10px;
+}
+
+h1{
+ font-size:clamp(2.2rem,5vw,4rem);
+ font-weight:800;
+ letter-spacing:1px;
+}
+
+h2{
+ margin-top:10px;
+ font-size:clamp(1.1rem,2vw,1.6rem);
+ font-weight:400;
+}
+
+.event-card{
+ margin:30px auto;
+ background:#fff;
+ color:#333;
+ border-radius:18px;
+ max-width:520px;
+ padding:22px;
+ box-shadow:var(--shadow);
+ text-align:left;
+}
+
+.btn{
+ display:inline-block;
+ margin-top:10px;
+ padding:15px 34px;
+ background:#fff;
+ color:var(--secondary);
+ text-decoration:none;
+ border-radius:999px;
+ font-weight:700;
+ transition:.3s;
+}
+
+.btn:hover{
+ transform:translateY(-3px);
+ background:var(--primary);
+ color:#fff;
+}
+
+section{
+ max-width:1100px;
+ margin:auto;
+ padding:70px 20px;
+}
+
+section>h2{
+ color:var(--secondary);
+ text-align:center;
+ margin-bottom:35px;
+ font-weight:800;
+}
+
+.song-card{
+ background:#fff;
+ border-left:8px solid var(--primary);
+ border-radius:18px;
+ padding:24px;
+ margin-bottom:20px;
+ box-shadow:0 10px 20px rgba(0,0,0,.08);
+ cursor:pointer;
+ transition:.3s;
+}
+
+.song-card:hover{
+ transform:translateY(-6px);
+ border-left-color:var(--accent);
+}
+
+.song-card h3{
+ color:var(--secondary);
+ margin-bottom:8px;
+}
+
+#lyricsContent{
+ background:#fff;
+ border-radius:20px;
+ padding:35px;
+ box-shadow:var(--shadow);
+ min-height:220px;
+}
+
+footer{
+ background:var(--secondary);
+ color:#fff;
+ text-align:center;
+ padding:35px 20px;
+}
+
+footer p:first-child{
+ font-size:1.2rem;
+ font-weight:700;
+ margin-bottom:8px;
+}
+
+@media (max-width:768px){
+
+.overlay{
+ padding:28px 20px;
+}
+
+.logos img{
+ width:70px;
+ height:70px;
+}
+
+.event-card{
+ text-align:center;
+}
+
+.song-card{
+ padding:18px;
+}
+
+}
