@@ -15,17 +15,31 @@ Kekal perintah Jamalullail`,
 
   ppp: `Terbitmu Di Negara Malaysia
 Memberi Sinar Dalam Kegelapan
+Diasuh Dilatih Dibentuk Mulia
+Bekal Kemudi Dalam Perkhidmatan
 
-... (kandungan lagu PPP yang telah dimasukkan sebelum ini) ...
+Rela Berkhidmat Di Mana Jua
+Hutan Belantara Sedia Dirasa
+Ombak Dan Badai Diharung Biasa
+Nyawa Tergadai Tidak Terasa
 
+----- CHORUS -----
+
+Jangan Ikutkan Rasa Dihati
+Kelak Impian Tinggal Simpati
+Bertekad Terus Berjuang Jati
+Sampai Kita Dihormati
+
+Jika Kami Terus Berusaha
+Pantang Mundur Sebelum Berjaya
 Wawasan KKM Asas Usaha
 Penolong Pegawai Perubatan Berjaya`
 };
 
 function showSong(key) {
-  const container = document.getElementById("lyricsContent");
-  container.innerHTML = `
-    <button onclick="backToMenu()">← Kembali</button>
+  const lyricsContent = document.getElementById("lyricsContent");
+  lyricsContent.innerHTML = `
+    <button class="back-btn" onclick="backToMenu()">← Kembali</button>
     <pre>${songs[key]}</pre>
   `;
   document.getElementById("lyrics").scrollIntoView({
